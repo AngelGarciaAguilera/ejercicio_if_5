@@ -10,6 +10,10 @@ public class App {
     public static void main(String[] args) {
         
         Scanner miScan = new Scanner(System.in);
+        int grande;
+        int mediano;
+        int pequeño;
+
         
         System.out.println("Introduzca el primer número: ");
         int pnum = miScan.nextInt();
@@ -20,5 +24,42 @@ public class App {
         System.out.println("Introduzca el tercer número: ");
         int tnum = miScan.nextInt();
         
+        if (pnum >= snum){
+            if(pnum >= tnum){
+                grande = pnum;
+                if(snum >= tnum){
+                    mediano = snum;
+                    pequeño = tnum;
+                }
+                else{
+                    mediano = tnum;
+                    pequeño = snum;
+                }
+            }
+            else{
+                grande = tnum;
+                mediano = pnum;
+                pequeño = snum;
+            }
+        }else{ //snum > pnum
+            if(pnum >= tnum){
+                grande = snum;
+                mediano = pnum;
+                pequeño = tnum;
+            }
+            else{ //tnum > pnum
+                if(snum >= tnum){
+                    grande = snum;
+                    mediano = tnum;
+                    pequeño = pnum;
+                }
+                else{
+                    grande = tnum;
+                    mediano = snum;
+                    pequeño = pnum;
+                }
+            }
+        }
+        System.out.println(grande + ">" + mediano + ">" + pequeño);
     }
 }
