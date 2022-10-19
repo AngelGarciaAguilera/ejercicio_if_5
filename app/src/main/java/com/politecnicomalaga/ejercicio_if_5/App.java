@@ -31,12 +31,12 @@ public class App {
                     mediano = snum;
                     pequeño = tnum;
                 }
-                else{
+                else{ //tnum > snum
                     mediano = tnum;
                     pequeño = snum;
                 }
             }
-            else{
+            else{ //tnum > pnum
                 grande = tnum;
                 mediano = pnum;
                 pequeño = snum;
@@ -53,13 +53,13 @@ public class App {
                     mediano = tnum;
                     pequeño = pnum;
                 }
-                else{
+                else{ //tnum > snum
                     grande = tnum;
                     mediano = snum;
                     pequeño = pnum;
                 }
             }
         }
-        System.out.println(grande + ">" + mediano + ">" + pequeño);
+        System.out.println(grande + " > " + mediano + " > " + pequeño);
     }
 }
